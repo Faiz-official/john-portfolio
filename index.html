@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: #1e293b;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 1s ease;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    animation: fadeIn 2s ease;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #38bdf8;
+    animation: fadeUp 1.5s ease;
+    transition: transform 0.4s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+/* Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: fadeUp 1.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Reviews */
+.review {
+    background: #334155;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    animation: fadeUp 2s ease;
+}
+
+/* Contact */
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #38bdf8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background: #0ea5e9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+}
+
+footer {
+    background: #1e293b;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>John</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="profile.png" alt="John Profile" class="profile-img">
+    <h2>Hello, I'm <span>John</span></h2>
+    <p>A Passionate Web Developer Creating Modern & Responsive Websites</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a professional web developer with experience in HTML, CSS, JavaScript, and cloud technologies. I build clean, scalable, and high-performance web applications.</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio website built using HTML, CSS, and JavaScript with responsive design.</p>
+        </div>
+
+        <div class="card">
+            <h3>E-Commerce Website</h3>
+            <p>Developed a fully functional online store with payment integration and admin dashboard.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Deployment Project</h3>
+            <p>Deployed scalable applications using AWS, Docker, and Kubernetes.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="reviews">
+    <h2>Client Reviews</h2>
+
+    <div class="review">
+        <p>"John delivered our project on time with exceptional quality. Highly recommended!"</p>
+        <strong>- Sarah M.</strong>
+    </div>
+
+    <div class="review">
+        <p>"Very professional and skilled developer. Our website performance improved significantly."</p>
+        <strong>- David L.</strong>
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+</section>
+
+<footer>
+    <p>© 2026 John | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
